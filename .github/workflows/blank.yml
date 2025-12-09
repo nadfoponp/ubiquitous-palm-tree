@@ -27,7 +27,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           curl -L -o linux.tar.gz "https://github.com/86maid/ddddocr/releases/download/V6.0.0/linux-x86_64.zip"
-          tar -zxvf ./linux.tar.gz
+          unzip ./linux.tar.gz
           chmod +x ./ddddocr
           ./ddddocr &
           curl -X POST "http://localhost:8000/initialize" \
