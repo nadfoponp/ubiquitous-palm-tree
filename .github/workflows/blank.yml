@@ -28,6 +28,7 @@ jobs:
         run: |
           python --version
           pip install ddddocr[api]
+          pip install fastapi uvicorn pydantic
           python -m ddddocr api &
           curl -X POST "http://localhost:8000/initialize" \
             -H "Content-Type: application/json" \
