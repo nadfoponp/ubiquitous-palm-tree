@@ -28,7 +28,7 @@ jobs:
         run: |
           python --version
           pip install ddddocr[api]
-          python -m ddddocr api --host 0.0.0.0 --port 8000 &
+          python -m ddddocr api &
           curl -X POST "http://localhost:8000/initialize" \
             -H "Content-Type: application/json" \
             -d '{"ocr": true, "det": false}'
